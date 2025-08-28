@@ -7,13 +7,16 @@ This repository contains the official implementation of the paper:
 ---
 
 ## Requirements
-- Python >= 3.7
-- PyTorch >= 1.7
-- scikit-learn
-- matplotlib
-- numpy
-
-(You may add other dependencies as needed.)
+- matplotlib>=3.5
+- numpy>=1.21
+- scikit-learn>=1.0
+- scipy>=1.7
+- torch>=1.13
+- torch-geometric>=1.6
+- torch-scatter>=2.1
+- torch-sparse>=0.6
+- tqdm>=4.64
+- wandb>=0.13
 
 ---
 
@@ -21,8 +24,13 @@ This repository contains the official implementation of the paper:
 
 ### Training
 ```bash
+cd src
 python train.py --dname <DATASET_NAME> --method SheafHyperGNNDiag --new_edge True --earlystop True --plot True
 ```
+
+## Dataset Preparation
+To prepare the datasets, follow the guidelines in the [AllSet repository](https://github.com/jianhao2016/AllSet).  
+Once generated, move the `data` folder into `../data`.
 
 ## Citation
 
