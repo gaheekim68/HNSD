@@ -7,17 +7,10 @@ This repository contains the official implementation of the paper:
 ---
 
 ## Requirements
-- matplotlib>=3.5
-- numpy>=1.21
-- scikit-learn>=1.0
-- scipy>=1.7
-- torch>=1.13
-- torch-geometric>=1.6
-- torch-scatter>=2.1
-- torch-sparse>=0.6
-- tqdm>=4.64
-- wandb>=0.13
-
+Install the dependencies with:
+```bash
+pip install -r requirements.txt
+```
 ---
 
 ## Usage
@@ -25,16 +18,16 @@ This repository contains the official implementation of the paper:
 ### Training
 ```bash
 cd src
-python train.py --dname <DATASET_NAME> --method SheafHyperGNNDiag --new_edge True --earlystop True --plot True
+python train.py --dname senate-committees --method SheafHyperGNNDiag --new_edge True --earlystop True --plot True
 ```
 
 ## Dataset Preparation
-To prepare the datasets, follow the guidelines in the [AllSet repository](https://github.com/jianhao2016/AllSet).  
-Once generated, move the `data` folder into `../data`.
+Follow the dataset preparation steps from the [AllSet repository](https://github.com/jianhao2016/AllSet).  
+then place the resulting `data` folder under `../data`.
 
 ## Citation
 
-If you use this code in your research, please cite:
+If you find this code useful in your research, please cite:
 
 ```bibtex
 @article{Choi_2025,
@@ -49,6 +42,7 @@ If you use this code in your research, please cite:
   url       = {http://dx.doi.org/10.1109/ACCESS.2025.3592104}
 }
 ```
-Note: Our implementation follows the pipeline provided in https://github.com/IuliaDuta/sheaf_HNN. 
+
+Note: Our implementation builds upon the pipeline from [sheaf_HNN](https://github.com/IuliaDuta/sheaf_HNN). 
 We thank the original authors for releasing their code.
 
